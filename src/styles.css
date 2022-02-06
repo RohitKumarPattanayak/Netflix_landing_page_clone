@@ -1,0 +1,235 @@
+body {
+    background: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 5%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+  }
+  .navbar__brand {
+    height: 100%;
+    width: 100px;
+  }
+  
+  .brand__logo {
+    width: 100%;
+    height: 100%;
+  }
+  .language__drop__down {
+    background: transparent;
+    border: none;
+    color: white;
+  }
+  .language__drop__down:focus {
+    outline: none;
+  }
+  .dropdown__container {
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.4rem;
+    border-radius: 4px;
+  }
+  .nav__item {
+    height: 40%;
+  }
+  .signin__button {
+    background: #dc030f;
+    border: 1px solid #dc030f;
+    color: white;
+    height: 30px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+  .primary__button {
+    background: #dc030f;
+    border: 1px solid #dc030f;
+    color: white;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2px;
+  }
+  
+  .navbar__nav__items {
+    display: flex;
+    gap: 10px;
+  }
+  .hero__bg__image__container {
+    height: 80vh;
+    width: 100%;
+  }
+  .hero__bg__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .hero__bg__overlay {
+    position: absolute;
+    inset: 0;
+    height: 80vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+  .hero__card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 20%;
+  }
+  .email__form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .email__input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding-left: 7px;
+    font-size: 20;
+  }
+  .email__input:focus + .email__label {
+    top: 0.2rem;
+    font-size: 12px;
+  }
+  .email__input:not(:placeholder-shown).email__input:not(:focus) + .email__label {
+    top: 0.2rem;
+    font-size: 12px;
+  }
+  .email__input:focus-visible {
+    outline: none;
+  }
+  .form__container {
+    background: white;
+    height: 50px;
+    border: none;
+    position: relative;
+    width: 90%;
+  }
+  .email__label {
+    color: rgb(153, 149, 149);
+    position: absolute;
+    z-index: 10;
+    left: 2%;
+    top: 28%;
+    transition: 0.5s;
+  }
+  .hero__title {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  .hero__subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .hero__description {
+    font-weight: 400;
+    margin: 0 50px;
+    font-size: 1rem;
+  }
+  /*this responsive property*/
+  @media (min-width: 768px) {
+    .hero__bg__image__container {
+      height: 100vh;
+    }
+    .hero__bg__overlay {
+      height: 100vh;
+    }
+    .hero__card {
+      left: 30%;
+      top: 40%;
+      transform: translate(-20%, -20%);
+    }
+    .hero__title {
+      font-size: 3rem;
+    }
+    .hero__subtitle {
+      font-size: 1.5rem;
+    }
+    .hero__description {
+      font-size: 1.4rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .navbar {
+      padding: 2% 5%;
+    }
+    .hero__card {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hero__title {
+      font-size: 3.5rem;
+    }
+    .hero__subtitle {
+      font-size: 1.5rem;
+    }
+    .hero__description {
+      font-size: 1.3rem;
+    }
+    .navbar__brand {
+      width: 150px;
+    }
+    button.signin__button{
+      font-size: medium;
+    }
+    .signin__button {
+      padding: 5px auto;
+      height: 30px;
+      font-size: 18px;
+    }
+    .dropdown__container {
+      padding: 10px 5px;
+    }
+    .navbar__nav__items {
+      gap: 30px;
+    }
+    .form__container {
+      width: 50%;
+    }
+    .primary__button {
+      margin-top: 0px;
+      height: 53px;
+      width: 160px;
+    }
+    .email__form__container {
+      flex-direction: row;
+      align-items: center;
+      gap: 1;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .dropdown__container{
+        max-width: 100px;
+        padding: 5px;
+    }
+    .dropdown__container i{
+        display: none;
+    }
+  }
+  
